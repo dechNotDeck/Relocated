@@ -4,6 +4,8 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.dechiridas.relocated.commands.RM;
+import com.dechiridas.relocated.commands.Rshrine;
+import com.dechiridas.relocated.listeners.RBlockListener;
 import com.dechiridas.relocated.listeners.RPlayerListener;
 import com.dechiridas.relocated.util.Config;
 import com.dechiridas.relocated.util.RespawnManager;
@@ -16,6 +18,7 @@ public class Relocated extends JavaPlugin {
 	
 	// Listeners
 	public RPlayerListener playerListener = new RPlayerListener(this);
+	public RBlockListener blockListener = new RBlockListener(this);
 	
 	// Managers
 	public PluginManager pm;
@@ -35,6 +38,7 @@ public class Relocated extends JavaPlugin {
 		// Command executors
 		getCommand("rm").setExecutor(new RM(this));
 		getCommand("resman").setExecutor(new RM(this));
+		getCommand("rshrine").setExecutor(new Rshrine(this));
 	}
 	
 	@Override

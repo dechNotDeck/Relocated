@@ -9,10 +9,12 @@ public class Respawn implements Serializable {
 	
 	private ResLocation location;
 	private boolean enabled;
+	private ResType type;
 	
-	public Respawn(Location loc, boolean enable) {
+	public Respawn(Location loc, boolean enable, ResType type) {
 		this.location = resLocFromBukkitLoc(loc);
 		this.enabled = enable;
+		this.type = type;
 	}
 	
 	private ResLocation resLocFromBukkitLoc(Location loc) {
@@ -40,5 +42,9 @@ public class Respawn implements Serializable {
 	
 	public void setLocation(Location loc) {
 		this.location = resLocFromBukkitLoc(loc);
+	}
+	
+	public ResType getType() {
+		return type;
 	}
 }

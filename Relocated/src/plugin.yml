@@ -11,3 +11,6 @@ commands:
     rm:
         description: Respawn management
         usage: /rm <add|[del|rem]|[enable|disable]> [<index|etc>]
+    rshrine:
+        description: Generate a shrine on the next clicked block
+        usage: /rshrine [halt]

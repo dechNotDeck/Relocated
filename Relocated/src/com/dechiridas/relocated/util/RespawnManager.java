@@ -53,7 +53,11 @@ public class RespawnManager {
 	}
 	
 	public boolean addRespawn(Location loc, boolean enabled) {
-		Respawn respawn = new Respawn(loc, enabled);
+		return addRespawn(loc, enabled, ResType.Custom);
+	}
+	
+	public boolean addRespawn(Location loc, boolean enabled, ResType type) {
+		Respawn respawn = new Respawn(loc, enabled, type);
 		return addRespawn(respawn);
 	}
 	
