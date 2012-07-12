@@ -1,0 +1,13 @@
+name: Relocated
+version: 1.0
+description: Respawn control and distribution.
+author: dechiridas
+website: http://www.dechiridas.com/
+main: com.dechiridas.relocated.Relocated
+commands:
+    resman:
+        description: Respawn management
+        usage: /resman <add|[del|rem]|[enable|disable]> [<index|etc>]
+    rm:
+        description: Respawn management
+        usage: /rm <add|[del|rem]|[enable|disable]> [<index|etc>]
